@@ -7,3 +7,5 @@ print(pow(10, 3)) #10的3次方
 print(max(4, 8, 6)) #最大值
 print(round(3.521)) #四舍五入
 print((3.5))
+int() #字符串变整数
+float() #字符串变浮点
