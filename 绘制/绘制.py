@@ -7,7 +7,9 @@ turtle.pensize(25)
 turtle.pencolor("purple")
 turtle.pencolor(0.63, 0.13, 0.94)  # RGB
 turtle.seth(-40)  # 旋转到绝对角度，left和right是转向
+colors = ["blue", "black", "red", "orange", "green"]
 for i in range(4):
+    turtle.pencolor(colors[i])
     turtle.circle(40, 80)
     turtle.circle(-40, 80)
 turtle.circle(40, 80 / 2)
