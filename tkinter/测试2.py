@@ -1,10 +1,17 @@
-def printentry():
-    var2.set(var1.get())
-from Tkinter import *
-root=Tk()
-var1=StringVar()
-Entry(root,textvariable=var1).pack()
-Button(root,text="print entry",command=printentry).pack()
-var2=StringVar()
-Label(root,textvariable=var2).pack()
-root.mainloop()
+delay(0)
+speed(0)
+r = 100  # 半径
+angle = 360
+pensize(20)  # 粗细
+colors = ["blue", "black", "red", "orange", "green"]  # 颜色
+x = -4.8  # 水平位移校准
+y = 0  # 竖直位移校准
+for i in range(5):
+    x = 2.4+x
+    if i == 3:
+        x = -3.6; y = -r
+    pencolor(colors[i])
+    pu()
+    goto(x*r-2.4*y, y)
+    pd()
+    circle(r, angle)
