@@ -10,6 +10,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\文件处理\songlist.json">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\歌单文件处理\plex导入网易云歌单 QQ音乐歌单.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\歌单文件处理\歌单(网易云_qq音乐).py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\绘制.py">
           <value>
             <Attribute>
