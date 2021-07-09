@@ -1,10 +1,11 @@
+# python 3
 import urllib.request
 import urllib.parse
 import json
 import socket
 
-#域名解析
-result = socket.getaddrinfo("howard115.synology.me", None)
+# 域名解析
+result=socket.getaddrinfo("howard115.synology.me", None)
 # print(result[0][4][0])
 
 chose=input("网易云输入1，qq音乐输入2：")
@@ -14,6 +15,8 @@ if chose == "1":
     uid=input("输入：")
     url='http://' + result[0][4][0] + ':3000/playlist/detail?id=' + uid
     get1, get2, get3="playlist", "tracks", "name"
+    get4, get5="ar", "name"
+    print("处理中..")
 elif chose == "2":
     # qq音乐
     print("例如：https://y.qq.com/n/yqq/playlist/3569246889.html，输入：3569246889")
@@ -21,16 +24,18 @@ elif chose == "2":
     url='https://api.qq.jsososo.com/songlist?id=' + uid
     # url = 'http://howard115.synology.me:54008/songlist?id=3569246889' + uid
     get1, get2, get3="data", "songlist", "songname"
+    get4, get5="singer", "name"
+    print("处理中..")
 else:
     print("输入错误")
-print("处理中..")
+
 headers={
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'}
 request=urllib.request.Request(url=url, headers=headers)
 response=urllib.request.urlopen(request)
 # 输出所有
 # print(response.read().decode('utf8'))
-ls = response.read().decode('utf8')
+ls=response.read().decode('utf8')
 
 # 将内容写入文件中
 fo1=open("songlist.json", "w", encoding='utf8')
@@ -47,9 +52,11 @@ json_data=json.loads(ls)
 
 # get检索键，并输出该值到result1列表
 data=json_data.get(get1).get(get2)  # 字典存在套娃
+# print(data)
 result1=[]
 for i in data:
-    result1.append(i.get(get3))
+    result1.append(eval('i.get(get3) + " - " + i.get(get4)[0].get(get5)'))  # 歌名+演唱者
+
 # print(result1)
 
 # 输出result1列表到qq123.txt
@@ -64,5 +71,6 @@ for line in fo2.readlines():
     print(line, end="")
 fo2.close()
 
-print("歌单已导出到songlist-songname.txt")
-input("---按enter，自动关闭窗口---")
+print("")
+print("歌单已导出到：songlist-songname.txt")
+input("-----按enter，即可关闭窗口-----")
