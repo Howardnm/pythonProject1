@@ -5,7 +5,7 @@ import socket
 
 #域名解析
 result = socket.getaddrinfo("howard115.synology.me", None)
-print(result[0][4][0])
+# print(result[0][4][0])
 
 chose=input("网易云输入1，qq音乐输入2：")
 if chose == "1":
