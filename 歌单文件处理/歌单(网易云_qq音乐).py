@@ -59,7 +59,7 @@ for i in data:
 
 # print(result1)
 
-# 输出result1列表到qq123.txt
+# 输出result1列表到songlist-songname.txt
 fo=open("songlist-songname.txt", "w", encoding='utf8')
 for line in result1:
     fo.write(line + '\n')
