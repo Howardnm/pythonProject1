@@ -4,16 +4,28 @@ import urllib.parse
 import json
 import socket
 
+
 # 域名解析
-result=socket.getaddrinfo("howard115.synology.me", None)
-# print(result[0][4][0])
+def urlsearch():
+    try:
+        result=socket.getaddrinfo("howard1115.synology.me", None)
+        result=result[0][4][0]
+        return result
+    except:
+        try:
+            result=socket.getaddrinfo("howard115.zicp.net", None)
+            result=result[0][4][0]
+            return result
+        except:
+            print("服务器API无法访问")
+
 
 chose=input("网易云输入1，qq音乐输入2：")
 if chose == "1":
     # 网易云音乐
     print("例如：https://music.163.com/#/playlist?id=3168324249，输入：3168324249")
     uid=input("输入：")
-    url='http://' + result[0][4][0] + ':3000/playlist/detail?id=' + uid
+    url='http://' + urlsearch() + ':3000/playlist/detail?id=' + uid
     get1, get2, get3="playlist", "tracks", "name"
     get4, get5="ar", "name"
     print("处理中..")
@@ -73,4 +85,4 @@ fo2.close()
 
 print("")
 print("歌单已导出到：songlist-songname.txt")
-input("-----按enter，即可关闭窗口-----")
+# input("-----按enter，即可关闭窗口-----")
