@@ -15,7 +15,7 @@ headers={
 request=urllib.request.Request(url=url, headers=headers)
 response=urllib.request.urlopen(request)
 # 输出所有
-# print(response.read().decode('gbk'))
+print(response.read())
 # 将内容写入文件中
 with open('D:/123456.html', 'wb') as fp:
     fp.write(response.read())

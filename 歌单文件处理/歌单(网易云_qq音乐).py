@@ -33,7 +33,8 @@ elif chose == "2":
     # qq音乐
     print("例如：https://y.qq.com/n/yqq/playlist/3569246889.html，输入：3569246889")
     uid=input("输入：")
-    url='https://api.qq.jsososo.com/songlist?id=' + uid
+    url='http://howard115.synology.me:54008/songlist?id=' + uid
+    # url='https://api.qq.jsososo.com/songlist?id=' + uid
     # url = 'http://howard115.synology.me:54008/songlist?id=3569246889' + uid
     get1, get2, get3="data", "songlist", "songname"
     get4, get5="singer", "name"

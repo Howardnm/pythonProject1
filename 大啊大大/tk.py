@@ -2,10 +2,10 @@
 # -*- coding: UTF-8 -*-
 
 # Python2.x 导入方法
-from Tkinter import *  # 导入 Tkinter 库
+#from Tkinter import *  # 导入 Tkinter 库
 
 # Python3.x 导入方法
-# from tkinter import *
+from tkinter import *
 root=Tk()  # 创建窗口对象的背景色
 # 创建两个列表
 li=['C', 'python', 'php', 'html', 'SQL', 'java']
