@@ -45,6 +45,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\notion\专辑规范化审核工具.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\大啊大大\鼠标.py">
           <value>
             <Attribute>
@@ -70,6 +77,20 @@
           <value>
             <Attribute>
               <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\爬虫\BeautifulSoup.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\爬虫\Selenium.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>
