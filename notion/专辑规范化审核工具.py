@@ -24,7 +24,7 @@ from chardet.universaldetector import UniversalDetector
 
 # 去cmd构建exe："pyinstaller -i 456.ico -F C:\Users\85099\PycharmProjects\pythonProject1\notion\专辑规范化审核工具.py"
 # pip3 install requests
-print("---------------------------------")
+print("----------------------------------")
 print(
     "wiki指南：\033[1;34mhttps://antique-hacksaw-c2a.notion.site/Plex-music-family-029133efa133486db0c3624e4c5521de\033[0m")
 
